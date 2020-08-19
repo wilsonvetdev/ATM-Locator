@@ -26,10 +26,8 @@ class ATMlocator
 
     if self.user_bank_list.length != 0
       self.friendly_bank_list
-      puts "Bank list takes a bit to update =/"
     else
       Messages.no_bank_message
-      puts "*Bank list takes a bit to update to ensure accuracy =/*"
     end
     puts "-----------------------------------------"
 
