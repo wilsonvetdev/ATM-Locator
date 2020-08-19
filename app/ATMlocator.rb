@@ -7,10 +7,6 @@ class ATMlocator
     @prompt = TTY::Prompt.new
   end
 
-  def friendly_bank_list
-    prompt.ok("You are a customer at these banks --#{self.user_bank_list}--" )
-  end
-
   def login_or_register
     user_choice = self.prompt.select("Logging in or Registering?",
     [ "Logging-in", "Register" ]
@@ -25,7 +21,7 @@ class ATMlocator
     puts "Hello #{self.user.user_name}, this is the main menu."
 
     if self.user_bank_list.length != 0
-      self.friendly_bank_list
+      puts "You are a customer at these banks --#{self.user_bank_list}--".green
     else
       Messages.no_bank_message
     end
