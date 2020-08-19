@@ -1,3 +1,4 @@
+require 'pry'
 class ATMlocator
 
   attr_accessor :prompt, :user
@@ -47,7 +48,7 @@ class ATMlocator
     self.prompt.select("What would you like to accomplish today?") do |menu|
       menu.choice "Find banks by zipcode", -> { self.list_banks_by_zipcode }
       menu.choice "Add your bank to a list of banks to which you are a customer", -> { self.add_bank_to_list }
-      menu.choice "Delete a bank from your list", -> { puts "--Userbank find associated row and .destroy here to disassociate--" }
+      menu.choice "Delete a bank from your list", -> { self.delete_bank_from_list }
       menu.choice "Not what you are looking for? Click here for more.".yellow, -> { puts "--sub_menu here--"}
       menu.choice "Log off".red, -> { puts "--Have a nice day!--"}
     end
@@ -99,6 +100,14 @@ class ATMlocator
     self.main_menu if keypress
   end
 
+  def delete_bank_from_list
+    self.user.banks.map {|bank| bank.id.to_s + "--" + bank.bank_name }
+    prompt = TTY::Prompt.new
+    bank_id = prompt.ask("Please input bank id number to delete.")
+    result = Userbank.find_by(user_id: self.user.id, bank_id: bank_id)
+    result.destroy 
+    binding.pry
+  end 
 
   def run
     Messages.welcome
@@ -109,6 +118,6 @@ class ATMlocator
   end
 
   private
-
 end
+
 
