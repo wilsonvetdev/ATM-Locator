@@ -39,4 +39,16 @@ class Messages
         prompt.warn("We don't have a list of banks to which you are a customer yet.")
     end
 
+    def self.login_register_message(user_choice)
+        if user_choice == "Logging-in"
+            Messages.loading_message
+            puts "\n\Alright, let's get you logged in!"
+            User.user_logging_in
+        elsif user_choice == "Register"
+            Messages.loading_message
+            puts "\n\Alright, let's get you registered!"
+            User.register_user
+        end
+    end
+
 end
