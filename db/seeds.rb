@@ -25,8 +25,8 @@ converted_array.each do |hash|
 end
 # creates bank instances by iterating through each hash inside converted_array.
 
-eric_kim = User.create(user_name: "erickim")
-sylwia = User.create(user_name: "sylwia")
+erickim = User.create(user_name: "erickim")
+sylwiav = User.create(user_name: "sylwiav")
 
 Userbank.create(user_id: eric_kim.id, bank_id: Bank.all.sample.id, user_fav: false)
 Userbank.create(user_id: eric_kim.id, bank_id: Bank.all.sample.id, user_fav: true)
