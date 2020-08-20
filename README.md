@@ -34,7 +34,7 @@ A list of all bank owned or in-bank ATMs located in New York State can be downlo
 
  Project is Completed for our purposes here.  
  NY State data includes longitude and latitude cooridinates.  Additional functionality can be built to show distance from user address input to ATMs using [Ruby Geocoder Gem](http://www.rubygeocoder.com/).  
- Dataset also available through Socrata Open Data API (SODA)[here.](https://data.ny.gov/resource/ndex-ad5r.json)
+ Dataset also available through Socrata Open Data API (SODA) [here.](https://data.ny.gov/resource/ndex-ad5r.json)
 
 ## COLLABORATOR CONTACT: 
 
