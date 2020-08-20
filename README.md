@@ -19,7 +19,9 @@ This web app employs the following technologies:
 7. Rake - Task manager 
 
 ## SOURCE FOR DATA
-A list of all bank owned or in-bank ATMs located in New York State can be downloaded in CSV format [here.](https://data.ny.gov/Government-Finance/Bank-Owned-ATM-Locations-in-New-York-State/ndex-ad5r)
+* A list of all bank owned or in-bank ATMs located in New York State can be downloaded in CSV format [here.](https://data.ny.gov/Government-Finance/Bank-Owned-ATM-Locations-in-New-York-State/ndex-ad5r)
+* https://api.adviceslip.com/
+
 
 ## SETUP:
 
