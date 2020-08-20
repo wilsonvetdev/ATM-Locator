@@ -3,10 +3,6 @@
 
 A Ruby CLI application for finding bank owned or in-bank ATM locations by ZIP code in New York State. 
 
-![atmlocator map gif](https://github.com/wilsonvetdev/ATM-Locator/blob/master/ezgif.com-optimize.gif)
-
-![atmlocator map gif1](https://github.com/wilsonvetdev/ATM-Locator/blob/master/ezgif.com-video-to-gif.gif)
-
 ## GENERAL INFO:
 
 ATM Locator was developed as a Flatiron School Web Developement Modual 1 project to demonstrate working knowledge of Relational Database Management, Active Records Associations and Create, Read, Update and Delete (CRUD) methods.
@@ -47,3 +43,8 @@ This web app employs the following technologies:
 
 [SA Williams](https://github.com/evilgeniusnyc)
 
+## SAMPLE
+
+![atmlocator map gif](https://github.com/wilsonvetdev/ATM-Locator/blob/master/ezgif.com-optimize.gif)
+
+![atmlocator map gif1](https://github.com/wilsonvetdev/ATM-Locator/blob/master/ezgif.com-video-to-gif.gif)
