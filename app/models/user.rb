@@ -6,10 +6,12 @@ class User < ActiveRecord::Base
         prompt =  TTY::Prompt.new
         user_name = prompt.ask("Please input your username -->", required: true)
         found_user = User.find_by(user_name: user_name) # change to find_by "unique id" later 
-        if found_user 
+        if found_user != nil
             found_user
         else
-            puts "Sorry, you aren't registered with us yet."
+            puts "Sorry, you aren't registered with us yet.".yellow
+            puts "Let's get you sorted now.".yellow
+            User.register_user
         end
     end
 
