@@ -4,7 +4,9 @@ class Quotes
         response = RestClient.get("https://api.chucknorris.io/jokes/random")
         body = response.body
         parsed = JSON.parse(body)
+        puts "-----------------------------------------"
         puts parsed["value"]
+        puts "-----------------------------------------"
     end
 
 end
