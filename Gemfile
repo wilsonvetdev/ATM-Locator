@@ -13,3 +13,6 @@ gem "pry"
 gem "faker"
 gem "csv"
 gem "colorize"
+
+gem "rest-client"
+gem "json"

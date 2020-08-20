@@ -32,7 +32,7 @@ class ATMlocator
       menu.choice "Add your bank to a list of banks to which you are a customer", -> { self.add_bank_to_list }
       menu.choice "Delete a bank from your list", -> { self.delete_bank_from_list }
       menu.choice "Fetch bank list", -> { self.display_user_bank_list }
-      menu.choice "Not what you are looking for? Click here for more.".yellow, -> { puts "--sub_menu here--"}
+      menu.choice "Not what you are looking for? Click here for more.".yellow, -> { self.joke }
       menu.choice "Log off".red, -> { puts "--Have a nice day!--"}
     end
   end
@@ -58,7 +58,7 @@ class ATMlocator
   end #returns an array of uniq bank names associated with user
 
   def display_user_bank_list
-    puts self.user.banks.map { |bank_instance| "#{bank_instance.bank_name}, #{bank_instance.street_address}".green }
+    puts self.user.banks.map { |bank_instance| "#{bank_instance.bank_name}, #{bank_instance.street_address}, #{bank_instance.city}".green }
     keypress = prompt.keypress("***Press enter to go back to main menu***".yellow, keys: [:return])
     self.main_menu if keypress
   end
@@ -92,6 +92,12 @@ class ATMlocator
     keypress = prompt.keypress("***Press enter to go back to main menu***".yellow, keys: [:return])
     self.main_menu if keypress
   end 
+
+  def joke
+    Quotes.grab_chucknorris_joke
+    keypress = prompt.keypress("***Press enter to go back to main menu***".yellow, keys: [:return])
+    self.main_menu if keypress
+  end
 
   def run
     Messages.welcome
