@@ -23,7 +23,7 @@ A list of all bank owned or in-bank ATMs located in New York State can be downlo
 
 ## SETUP:
 
-1. Clone this repo to your local machine git clone [here](https://github.com/wilsonvetdev/ATM-Locator)
+1. Clone this repo to your local machine -- git clone < git repository >
 2. Run cd ATMlocator with -b to access this project
 3. Run bundle install to install required dependencies
 4. Run rake db:migrate to create tables into the database
