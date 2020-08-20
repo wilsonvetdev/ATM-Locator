@@ -29,7 +29,7 @@ class ATMlocator
 
     self.prompt.select("What would you like to accomplish today?") do |menu|
       menu.choice "Find banks by zipcode", -> { self.list_banks_by_zipcode }
-      menu.choice "Add your bank to a list of banks to which you are a customer", -> { self.add_bank_to_list }
+      menu.choice "Add your bank to a list", -> { self.add_bank_to_list }
       menu.choice "Delete a bank from your list", -> { self.delete_bank_from_list }
       menu.choice "Fetch bank list", -> { self.display_user_bank_list }
       menu.choice "Not what you are looking for? Click here for more.".yellow, -> { self.joke }
@@ -94,7 +94,7 @@ class ATMlocator
   end 
 
   def joke
-    Quotes.grab_chucknorris_joke
+    Advice.grab_advice
     keypress = prompt.keypress("***Press enter to go back to main menu***".yellow, keys: [:return])
     self.main_menu if keypress
   end
