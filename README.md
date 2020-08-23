@@ -27,7 +27,7 @@ This web app employs the following technologies:
 ## SETUP:
 
 1. Clone this repo to your local machine -- git clone < git repository >
-2. Run cd ATMlocator with -b to access this project
+2. cd into the repo ATM-locator
 3. Run bundle install to install required dependencies
 4. Run rake db:migrate to create tables into the database
 5. Run rake db:seed to create seed data
