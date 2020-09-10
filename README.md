@@ -5,7 +5,7 @@ A Ruby CLI application for finding bank owned or in-bank ATM locations by ZIP co
 
 ## GENERAL INFO:
 
-ATM Locator was developed as a Flatiron School Web Developement Modual 1 project to demonstrate working knowledge of Relational Database Management, Active Records Associations and Create, Read, Update and Delete (CRUD) methods.
+ATM Locator was developed as a Flatiron School Web Developement Module 1 project to demonstrate working knowledge of Relational Database Management, Active Records Associations and Create, Read, Update and Delete (CRUD) methods.
 
 ## TECH STACK: 
 
